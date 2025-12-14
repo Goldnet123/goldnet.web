@@ -1,5 +1,5 @@
 {
-  "name": "Goldnet"
+  "name": "Goldnet",
   "compatibility_date": "2025-12-13",
   "assets": {
     "directory": "./dist"
