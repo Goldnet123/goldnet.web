@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-              <script src="maintenance.js"></script>
-  <script>
-    if (typeof maintenance !== "undefined" && maintenance === true) {
-      window.location.href = "/maintenance.html";
-    }
-  </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Server Rules</title>
+
+    <!-- Maintenance config -->
+    <script src="/maintenance.js"></script>
+
+    <!-- Redirect logic -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (typeof maintenance === "boolean" && maintenance === true) {
+                if (!window.location.pathname.includes("maintenance.html")) {
+                    window.location.replace("/maintenance.html");
+                }
+            }
+        });
+    </script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
