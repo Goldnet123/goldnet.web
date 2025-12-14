@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goldnet - Discord Rules</title>
+
+    <!-- Maintenance config -->
+    <script src="/maintenance.js"></script>
+
+    <!-- Maintenance redirect -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (typeof maintenance === "boolean" && maintenance === true) {
+                if (!window.location.pathname.includes("maintenance.html")) {
+                    window.location.replace("/maintenance.html");
+                }
+            }
+        });
+    </script>
+
     <style>
-        /* Basic Styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -62,7 +76,7 @@
             background-color: #4752C4;
         }
 
-        /* Dark Mode Styles */
+        /* Dark Mode */
         body.dark-mode {
             background-color: #121212;
             color: #f4f4f4;
@@ -77,6 +91,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Goldnet - Discord Rules</h1>
@@ -84,43 +99,17 @@
 
     <div class="container">
         <h2>Please follow these rules in the Goldnet official server!</h2>
+
         <div class="rules">
-            <div class="rule">
-                <strong>1. No cussing</strong><br>
-                Avoid using any profane language.
-            </div>
-            <div class="rule">
-                <strong>2. No words above 18</strong><br>
-                Avoid using inappropriate language or content for minors.
-            </div>
-            <div class="rule">
-                <strong>3. No giving personal info</strong><br>
-                Do not share personal information in any of the channels.
-            </div>
-            <div class="rule">
-                <strong>4. No ads or invitations to other groups</strong><br>
-                Advertising or inviting others to external groups is not allowed.
-            </div>
-            <div class="rule">
-                <strong>5. Do not be racist</strong><br>
-                Any form of racism will not be tolerated.
-            </div>
-            <div class="rule">
-                <strong>6. No spamming</strong><br>
-                Avoid excessive messages, pictures, or anything that can be considered spamming.
-            </div>
-            <div class="rule">
-                <strong>7. No bullying</strong><br>
-                Bullying, harassment, or any kind of abusive behavior is strictly prohibited.
-            </div>
-            <div class="rule">
-                <strong>8. No bots</strong><br>
-                Do not use bots without permission from server admins.
-            </div>
-            <div class="rule">
-                <strong>9. No links</strong><br>
-                Links to external websites are not allowed unless authorized.
-            </div>
+            <div class="rule"><strong>1. No cussing</strong><br>Avoid using any profane language.</div>
+            <div class="rule"><strong>2. No words above 18</strong><br>Avoid inappropriate language or content.</div>
+            <div class="rule"><strong>3. No giving personal info</strong><br>Do not share personal information.</div>
+            <div class="rule"><strong>4. No ads or invitations</strong><br>No advertising or external invites.</div>
+            <div class="rule"><strong>5. Do not be racist</strong><br>Racism will not be tolerated.</div>
+            <div class="rule"><strong>6. No spamming</strong><br>No message or media spam.</div>
+            <div class="rule"><strong>7. No bullying</strong><br>Harassment is forbidden.</div>
+            <div class="rule"><strong>8. No bots</strong><br>Bots only with admin permission.</div>
+            <div class="rule"><strong>9. No links</strong><br>Links only if authorized.</div>
         </div>
 
         <form action="https://discord.gg/sUPHxmbfS5" method="get" target="_blank">
@@ -129,15 +118,10 @@
     </div>
 
     <script>
-        // Dark Mode toggle
         function toggleDarkMode() {
-            const body = document.body;
-            const header = document.querySelector("header");
-            const container = document.querySelector(".container");
-
-            body.classList.toggle("dark-mode");
-            header.classList.toggle("dark-mode");
-            container.classList.toggle("dark-mode");
+            document.body.classList.toggle("dark-mode");
+            document.querySelector("header").classList.toggle("dark-mode");
+            document.querySelector(".container").classList.toggle("dark-mode");
         }
     </script>
 </body>
