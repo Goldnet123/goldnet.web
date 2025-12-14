@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maintenance</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --spinner: #111111;
+      --card: #f2f2f2;
+      --btn-bg: #111111;
+      --btn-text: #ffffff;
+    }
+
+    body.dark {
+      --bg: #0f0f0f;
+      --text: #ffffff;
+      --spinner: #ffffff;
+      --card: #1c1c1c;
+      --btn-bg: #ffffff;
+      --btn-text: #000000;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 40px 50px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 6px solid transparent;
+      border-top: 6px solid var(--spinner);
+      border-radius: 50%;
+      margin: 0 auto 25px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 15px;
+      opacity: 0.8;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      font-size: 14px;
+      cursor: pointer;
+      transition: transform 0.15s, opacity 0.15s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="spinner"></div>
+    <h1>Maintenance in Progress</h1>
+    <p>We are currently performing scheduled maintenance.<br>Please check back later.</p>
+    <button id="toggle">Toggle Dark / Light Mode</button>
+  </div>
+
+  <script>
+    const btn = document.getElementById("toggle");
+    btn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+</body>
+</html>
