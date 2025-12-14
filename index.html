@@ -194,7 +194,12 @@
     <footer id="footer">
         <p>&copy; 2025 Goldnet. All rights reserved.</p>
     </footer>
-
+      <script src="maintenance.js"></script>
+  <script>
+    if (typeof maintenance !== "undefined" && maintenance === true) {
+      window.location.href = "/maintenance.html";
+    }
+  </script>
     <script>
         // Sidebar umschalten
         function toggleSidebar() {
