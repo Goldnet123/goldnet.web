@@ -39,6 +39,12 @@
     </style>
 </head>
 <body>
+          <script src="maintenance.js"></script>
+  <script>
+    if (typeof maintenance !== "undefined" && maintenance === true) {
+      window.location.href = "/maintenance.html";
+    }
+  </script>
     <header>
         <h1>Server Rules</h1>
     </header>
@@ -58,11 +64,5 @@
             <li>11. No hacking in general</li>
         </ul>
     </main>
-      <script src="maintenance.js"></script>
-  <script>
-    if (typeof maintenance !== "undefined" && maintenance === true) {
-      window.location.href = "/maintenance.html";
-    }
-  </script>
 </body>
 </html>
