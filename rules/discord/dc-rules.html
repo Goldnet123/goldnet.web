@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goldnet - Discord Rules</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px solid #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .rules {
+            margin-top: 20px;
+        }
+
+        .rule {
+            margin-bottom: 15px;
+        }
+
+        .accept-button {
+            background-color: #5865F2;
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s;
+        }
+
+        .accept-button:hover {
+            background-color: #4752C4;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #f4f4f4;
+        }
+        header.dark-mode {
+            background-color: #222;
+        }
+        .container.dark-mode {
+            background-color: #1e1e1e;
+            color: #f4f4f4;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Goldnet - Discord Rules</h1>
+    </header>
+
+    <div class="container">
+        <h2>Please follow these rules in the Goldnet official server!</h2>
+        <div class="rules">
+            <div class="rule">
+                <strong>1. No cussing</strong><br>
+                Avoid using any profane language.
+            </div>
+            <div class="rule">
+                <strong>2. No words above 18</strong><br>
+                Avoid using inappropriate language or content for minors.
+            </div>
+            <div class="rule">
+                <strong>3. No giving personal info</strong><br>
+                Do not share personal information in any of the channels.
+            </div>
+            <div class="rule">
+                <strong>4. No ads or invitations to other groups</strong><br>
+                Advertising or inviting others to external groups is not allowed.
+            </div>
+            <div class="rule">
+                <strong>5. Do not be racist</strong><br>
+                Any form of racism will not be tolerated.
+            </div>
+            <div class="rule">
+                <strong>6. No spamming</strong><br>
+                Avoid excessive messages, pictures, or anything that can be considered spamming.
+            </div>
+            <div class="rule">
+                <strong>7. No bullying</strong><br>
+                Bullying, harassment, or any kind of abusive behavior is strictly prohibited.
+            </div>
+            <div class="rule">
+                <strong>8. No bots</strong><br>
+                Do not use bots without permission from server admins.
+            </div>
+            <div class="rule">
+                <strong>9. No links</strong><br>
+                Links to external websites are not allowed unless authorized.
+            </div>
+        </div>
+
+        <form action="https://discord.gg/sUPHxmbfS5" method="get" target="_blank">
+            <button type="submit" class="accept-button">Accept and Join Discord</button>
+        </form>
+    </div>
+
+    <script>
+        // Dark Mode toggle
+        function toggleDarkMode() {
+            const body = document.body;
+            const header = document.querySelector("header");
+            const container = document.querySelector(".container");
+
+            body.classList.toggle("dark-mode");
+            header.classList.toggle("dark-mode");
+            container.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
